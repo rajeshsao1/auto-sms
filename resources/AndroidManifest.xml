@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.autosms.myapplicationcallevent" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/logo" android:name="com.autosms.myapplicationcallevent.Helper.MyController" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:name="com.autosms.myapplicationcallevent.AboutAppActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.BlockContactActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.MessageSettingonofActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.AboutusActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.MisscallmsgActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.RegistrationActivity" android:exported="false" android:launchMode="singleTask"/>
+        <activity android:name="com.autosms.myapplicationcallevent.CallEndedmsgActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.MainActivity" android:exported="false"/>
+        <activity android:name="com.autosms.myapplicationcallevent.LoginActivity" android:exported="false" android:launchMode="singleTask"/>
+        <activity android:name="com.autosms.myapplicationcallevent.SplashScreenActivity" android:exported="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.autosms.myapplicationcallevent.BlockContact.BlockActivity" android:exported="false"/>
+        <receiver android:name="com.autosms.myapplicationcallevent.PhoneStateReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.autosms.myapplicationcallevent.backgroundtask.StartAppOnBoot" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorLightGray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout" android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:gravity="center" android:id="@+id/logintoolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_collapseMode="1" app:title="Message" app:titleTextColor="@color/colorWhite"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/capsule_bg" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="100dp" android:layout_marginRight="20dp" android:alpha="0.7">
+            <LinearLayout android:background="@drawable/capsule_txtbg" android:layout_width="match_parent" android:layout_height="200dp">
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="16dp" android:textColor="@color/colorBlack" android:id="@+id/edtMsg" android:padding="10dp" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:hint="Msg Text" android:minLines="3" android:inputType="textMultiLine"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+                <Button android:enabled="true" android:textColor="@color/colorWhite" android:id="@+id/btnEdit" android:background="@drawable/button_bg_capsule" android:padding="5dp" android:layout_width="0dp" android:layout_height="45dp" android:layout_marginLeft="10dp" android:layout_marginTop="35dp" android:layout_marginRight="10dp" android:layout_marginBottom="25dp" android:text="Edit" android:layout_weight="1"/>
+                <Button android:enabled="true" android:textColor="@color/colorWhite" android:id="@+id/btnSave" android:background="@drawable/button_bg_capsule" android:padding="5dp" android:layout_width="0dp" android:layout_height="45dp" android:layout_marginLeft="10dp" android:layout_marginTop="35dp" android:layout_marginRight="10dp" android:layout_marginBottom="25dp" android:text="Save" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="45dp" android:layout_margin="3dp" app:cardBackgroundColor="@color/white">
+        <LinearLayout android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="5">
+            <TextView android:textSize="16sp" android:textColor="@color/black" android:layout_gravity="center" android:id="@+id/title" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="4"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/edit" android:layout_width="0dp" android:layout_height="15dp" android:src="@drawable/ic_edit_black_24dp" android:layout_weight="0.5" android:layout_alignParentBottom="true"/> dp 
+            <ImageView android:layout_gravity="center" android:id="@+id/delete" android:layout_width="0dp" android:layout_height="15dp" android:src="@drawable/ic_delete_black_24dp" android:layout_weight="0.5" android:layout_alignParentBottom="true"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

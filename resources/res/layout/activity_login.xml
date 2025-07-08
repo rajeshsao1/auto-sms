@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorLightGray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:gravity="center" android:id="@+id/logintoolbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_collapseMode="1" app:title="Sign In"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/button_bg_capsule" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="100dp" android:layout_marginRight="20dp">
+            <ImageView android:layout_width="55dp" android:layout_height="55dp" android:layout_marginTop="5dp" android:src="@drawable/ic_account_circle_black_24dp" android:tint="@color/colorPrimaryDark"/>
+            <TextView android:textSize="30dp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_marginBottom="40dp" android:text="Sign In" style="@style/Animation"/>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText android:textSize="16dp" android:textColor="@color/colorBlack" android:id="@+id/edtnm" android:padding="10dp" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:hint="Email ID" android:minLines="1" android:inputType="text"/>
+                <TextView android:textColor="#ff0000" android:id="@+id/tvtoolemail" android:paddingLeft="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text=""/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:passwordToggleEnabled="true" app:passwordToggleTint="@color/colorPrimaryDark">
+                <com.google.android.material.textfield.TextInputEditText android:textSize="16dp" android:textColor="@color/colorBlack" android:id="@+id/edtPass" android:padding="10dp" android:paddingLeft="0dp" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:hint="Password" android:minLines="1" android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button android:textSize="16dp" android:textColor="@color/colorWhite" android:layout_gravity="center" android:id="@+id/btnLogin" android:background="@drawable/button_bg_capsule" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="15dp" android:layout_marginTop="40dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp" android:text="Sign In" android:textAllCaps="false"/>
+            <LinearLayout android:background="@drawable/button_bg_capsule" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="20dp" android:weightSum="10">
+                <TextView android:textSize="16dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvRegister" android:paddingLeft="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Register here" android:layout_weight="5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
